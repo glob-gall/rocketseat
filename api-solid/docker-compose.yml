@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  database:
+    image: bitnami/postgresql
+    hostname: rocket_db
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRESQL_USERNAME: ${DOCKER_USERNAME}
+      POSTGRESQL_PASSWORD: ${DOCKER_PASSWORD}
+      POSTGRESQL_DATABASE: ${DOCKER_DATABASE}
